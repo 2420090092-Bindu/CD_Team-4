@@ -1,0 +1,483 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f2f6fb;
+  color: #263445;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* ================================
+   MAIN PAGE
+   ================================ */
+
+.container {
+  width: 94%;
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 35px 20px 60px;
+  text-align: center;
+}
+
+/* ================================
+   MAIN TITLE
+   ================================ */
+
+h1 {
+  color: #eef3f7;
+  font-size: 34px;
+  font-weight: 700;
+  margin: 10px 0 12px;
+}
+
+.description {
+  color: #adb3ba;
+  font-size: 16px;
+  margin-bottom: 35px;
+}
+
+/* ================================
+   INPUT CARDS
+   ================================ */
+
+.input-card {
+  width: 90%;
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 24px 28px;
+
+  background: #ffffff;
+
+  border: 1px solid #d7e0ea;
+  border-radius: 10px;
+
+  box-shadow: 0 3px 10px rgba(40, 65, 90, 0.08);
+
+  text-align: left;
+}
+
+.input-card h2,
+.analysis-card h2,
+.result h2,
+.all-trees-section h2 {
+  margin-top: 0;
+  color: #174a7e;
+  font-size: 22px;
+}
+
+/* ================================
+   TEXT AREA
+   ================================ */
+
+textarea {
+  width: 100%;
+  min-height: 180px;
+
+  padding: 15px;
+
+  background: #fbfdff;
+  color: #263445;
+
+  border: 2px solid #b8c9da;
+  border-radius: 8px;
+
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 16px;
+  line-height: 1.6;
+
+  resize: vertical;
+  outline: none;
+}
+
+textarea::placeholder {
+  color: #8997a6;
+}
+
+textarea:focus {
+  border-color: #2f80ad;
+  box-shadow: 0 0 0 3px rgba(47, 128, 173, 0.12);
+}
+
+/* ================================
+   INPUT STRING
+   ================================ */
+
+.input-string {
+  width: 100%;
+  padding: 13px 15px;
+
+  background: #fbfdff;
+  color: #263445;
+
+  border: 2px solid #b8c9da;
+  border-radius: 8px;
+
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 16px;
+
+  outline: none;
+}
+
+.input-string::placeholder {
+  color: #8997a6;
+}
+
+.input-string:focus {
+  border-color: #2f80ad;
+  box-shadow: 0 0 0 3px rgba(47, 128, 173, 0.12);
+}
+
+/* ================================
+   BUTTON
+   ================================ */
+
+button {
+  margin-top: 18px;
+  padding: 12px 28px;
+
+  background: #174a7e;
+  color: white;
+
+  border: none;
+  border-radius: 7px;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: background 0.2s ease;
+}
+
+button:hover {
+  background: #21649d;
+}
+
+/* ================================
+   ANALYSIS / RESULT / ERROR
+   ================================ */
+
+.analysis-card,
+.result,
+.error {
+  width: 90%;
+  max-width: 900px;
+
+  margin: 28px auto;
+  padding: 24px;
+
+  background: #ffffff;
+
+  border: 1px solid #d7e0ea;
+  border-radius: 10px;
+
+  box-shadow: 0 3px 10px rgba(40, 65, 90, 0.08);
+
+  box-sizing: border-box;
+}
+
+.analysis-card {
+  text-align: left;
+  border-top: 4px solid #2f80ad;
+}
+
+/* ================================
+   STATUS COLORS
+   ================================ */
+
+.ambiguous {
+  color: #c0392b;
+  font-weight: 700;
+}
+
+.not-ambiguous {
+  color: #23824a;
+  font-weight: 700;
+}
+
+/* If you are using this class */
+.no-tree {
+  color: #b06b00;
+  font-weight: 700;
+}
+
+/* ================================
+   PARSER RESULT
+   ================================ */
+
+.result {
+  text-align: left;
+  border-top: 4px solid #4d78a8;
+}
+
+.result pre,
+.error pre {
+  margin: 0;
+
+  background: #f6f8fb;
+
+  border: 1px solid #dbe3ec;
+  border-radius: 7px;
+
+  padding: 16px;
+
+  color: #334155;
+
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 14px;
+  line-height: 1.7;
+
+  overflow-x: auto;
+}
+
+/* ================================
+   ERROR
+   ================================ */
+
+.error {
+  text-align: left;
+
+  border-left: 5px solid #d9534f;
+  background: #fffafa;
+}
+
+.error h2 {
+  color: #c0392b;
+}
+
+/* ================================
+   ALL PARSE TREES
+   ================================ */
+
+.all-trees-section {
+  width: 96%;
+  max-width: 1150px;
+
+  margin: 35px auto;
+  padding: 28px;
+
+  background: #ffffff;
+
+  border: 1px solid #d7e0ea;
+  border-radius: 10px;
+
+  box-shadow: 0 3px 10px rgba(40, 65, 90, 0.08);
+
+  box-sizing: border-box;
+
+  border-top: 4px solid #2f8f83;
+}
+
+/* ================================
+   TREE LIST
+   ================================ */
+
+.all-trees {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+/* ================================
+   INDIVIDUAL TREE CARD
+   ================================ */
+
+.single-tree-card {
+  width: 100%;
+
+  background: #fcfeff;
+
+  border: 1px solid #d8e2eb;
+  border-radius: 9px;
+
+  padding: 22px;
+
+  box-sizing: border-box;
+
+  box-shadow: 0 2px 8px rgba(40, 65, 90, 0.06);
+}
+
+.single-tree-card h3 {
+  margin: 0 0 18px;
+
+  color: #2f5f87;
+
+  text-align: center;
+
+  font-size: 20px;
+}
+
+/* ================================
+   TREE SCROLLING AREA
+   ================================ */
+
+.tree-scroll {
+  width: 100%;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  padding: 20px 15px 35px;
+
+  box-sizing: border-box;
+}
+
+/* ================================
+   TREE
+   ================================ */
+
+.tree-drawing {
+  width: max-content;
+  min-width: 100%;
+
+  display: flex;
+  justify-content: center;
+
+  box-sizing: border-box;
+}
+
+.tree-drawing > ul {
+  display: flex;
+  justify-content: center;
+
+  width: max-content;
+
+  margin: 0 auto;
+  padding: 30px 70px 0;
+}
+
+.tree-drawing ul {
+  position: relative;
+  display: flex;
+}
+
+.tree-drawing li {
+  list-style: none;
+  position: relative;
+
+  text-align: center;
+
+  padding: 30px 16px 0;
+}
+
+/* ================================
+   TREE CONNECTING LINES
+   ================================ */
+
+.tree-drawing li::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 50%;
+
+  width: 2px;
+  height: 30px;
+
+  background: #8b9aaa;
+
+  transform: translateX(-50%);
+}
+
+.tree-drawing li::after {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  right: 0;
+
+  height: 2px;
+
+  background: #8b9aaa;
+}
+
+.tree-drawing li:first-child::after {
+  left: 50%;
+}
+
+.tree-drawing li:last-child::after {
+  right: 50%;
+}
+
+.tree-drawing li:only-child::after {
+  display: none;
+}
+
+/* Root has no connecting line */
+.tree-drawing > ul > li::before,
+.tree-drawing > ul > li::after {
+  display: none;
+}
+
+/* ================================
+   TREE NODE
+   ================================ */
+
+.parse-node {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-width: 48px;
+  min-height: 44px;
+
+  padding: 9px 16px;
+
+  background: #eaf4fb;
+  color: #174a7e;
+
+  border: 2px solid #4a91c2;
+  border-radius: 7px;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  box-shadow: 0 2px 5px rgba(40, 65, 90, 0.10);
+
+  white-space: nowrap;
+}
+
+/* ================================
+   MOBILE
+   ================================ */
+
+@media (max-width: 700px) {
+  .container {
+    width: 100%;
+    padding: 25px 10px 40px;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+
+  .description {
+    font-size: 15px;
+  }
+
+  .input-card,
+  .analysis-card,
+  .result,
+  .error {
+    width: 100%;
+  }
+
+  .all-trees-section {
+    width: 100%;
+    padding: 16px;
+  }
+
+  .single-tree-card {
+    padding: 12px;
+  }
+}

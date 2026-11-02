@@ -1,0 +1,31 @@
+﻿.venv/
+.vscode/
+clang64/
+clangarm64/
+mingw32/
+mingw64/
+ucrt64/
+usr/
+var/
+dev/
+etc/
+opt/
+tmp/
+home/
+installerResources/
+winflex/
+*.exe
+*.ico
+*.ini
+*.dat
+network.xml
+msys2_shell.cmd
+
+# Python cache
+__pycache__/
+*.pyc
+
+# MSYS2 installation files
+InstallationLog.txt
+autorebase.bat
+components.xml
